@@ -10,7 +10,8 @@
   <p>浏览器默认字体为</p>
   <h1 id="defaultFont"></h1>
   <script>
-    var ff = getComputedStyle(document.body).getPropertyValue('font')
+    var st =getComputedStyle(document.body)
+    var ff = st.getPropertyValue('font') ||  st.getPropertyValue('font-family')
     document.getElementById('defaultFont').innerText = ff
   </script>
 </body>
