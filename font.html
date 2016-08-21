@@ -9,11 +9,9 @@
 </head>
 <body>
   <p id="ua"></p>
-  <p>浏览器默认字体为</p>
-  <h1 id="defaultFont"></h1>
+  <div>浏览器默认字体:<h1 id="defaultFont"></h1></div>
   <script>
-    var st =getComputedStyle(document.body)
-    var ff = st.getPropertyValue('font') ||  st.getPropertyValue('font-family')
+    var ff = getComputedStyle(document.body).getPropertyValue('font-family')
     document.getElementById('defaultFont').innerText = ff
     document.getElementById('ua').innerText = 'UA: ' + navigator.userAgent
   </script>
