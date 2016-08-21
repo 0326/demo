@@ -8,12 +8,12 @@
   </style>
 </head>
 <body>
-  <p id="ua"></p>
-  <div>浏览器默认字体:<h1 id="defaultFont"></h1></div>
+  <p>UA信息:<span id="ua"></span></p>
+  <p>浏览器默认字体:<span id="defaultFont"></span></p>
   <script>
     var ff = getComputedStyle(document.body).getPropertyValue('font-family')
     document.getElementById('defaultFont').innerText = ff
-    document.getElementById('ua').innerText = 'UA: ' + navigator.userAgent
+    document.getElementById('ua').innerText = navigator.userAgent
   </script>
 </body>
 </html>
